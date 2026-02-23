@@ -27,6 +27,7 @@ Users can:
 - View individual listing details
 - Edit their own listings
 - Delete their own listings
+- Image upload support using Cloudinary cloud storage
 
 Each listing includes:
 - Title
@@ -75,6 +76,10 @@ Each listing includes:
 - Connect-Flash
 - Method-Override
 
+  ### Image Storage
+- Cloudinary (for secure image upload and cloud storage)
+- Multer and multer-storage-cloudinary (for handling file uploads)
+
 ---
 
 ## 🏗 Architecture
@@ -118,6 +123,10 @@ The application follows MVC (Model-View-Controller) architecture:
 - Authorization middleware
 - Protected routes
 - Ownership verification before edit/delete
+
+## ☁️ Cloudinary Integration
+
+The application uses Cloudinary for storing listing images securely in the cloud. This allows efficient image management, faster loading, and prevents storing large image files on the server. Multer and multer-storage-cloudinary were used to handle file uploads and integrate Cloudinary with the Node.js backend.
 
 ---
 
